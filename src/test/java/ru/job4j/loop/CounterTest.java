@@ -1,7 +1,7 @@
 package ru.job4j.loop;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CounterTest {
 
@@ -11,7 +11,7 @@ public class CounterTest {
         int finish = 5;
         int result = Counter.sum(start, finish);
         int expected = 15;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -20,6 +20,6 @@ public class CounterTest {
         int finish = 10;
         int result = Counter.sumByEven(start, finish);
         int expected = 30;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 }

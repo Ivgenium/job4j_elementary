@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MultipleSwitchWeekTest {
 
@@ -10,7 +10,7 @@ public class MultipleSwitchWeekTest {
         String day = "Понедельник";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 1;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class MultipleSwitchWeekTest {
         String day = "Monday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 1;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class MultipleSwitchWeekTest {
         String day = "Вторник";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 2;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class MultipleSwitchWeekTest {
         String day = "Tuesday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 2;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class MultipleSwitchWeekTest {
         String day = "Среда";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 3;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class MultipleSwitchWeekTest {
         String day = "Wednesday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 3;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class MultipleSwitchWeekTest {
         String day = "Четверг";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 4;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class MultipleSwitchWeekTest {
         String day = "Thursday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 4;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -74,7 +74,7 @@ public class MultipleSwitchWeekTest {
         String day = "Пятница";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 5;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -82,7 +82,7 @@ public class MultipleSwitchWeekTest {
         String day = "Friday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 5;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -90,7 +90,7 @@ public class MultipleSwitchWeekTest {
         String day = "Суббота";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 6;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -98,7 +98,7 @@ public class MultipleSwitchWeekTest {
         String day = "Saturday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 6;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -106,7 +106,7 @@ public class MultipleSwitchWeekTest {
         String day = "Воскресенье";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 7;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -114,7 +114,7 @@ public class MultipleSwitchWeekTest {
         String day = "Sunday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = 7;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -122,7 +122,7 @@ public class MultipleSwitchWeekTest {
         String day = "Понедрельник";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = -1;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -130,7 +130,7 @@ public class MultipleSwitchWeekTest {
         String day = "Synday";
         int result = MultipleSwitchWeek.numberOfDay(day);
         int expected = -1;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
 }

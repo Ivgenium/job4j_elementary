@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixCheckTest {
     @Test
@@ -13,7 +13,7 @@ public class MatrixCheckTest {
         };
         int row = 1;
         boolean result = MatrixCheck.monoHorizontal(input, row);
-        Assert.assertTrue(result);
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -25,7 +25,7 @@ public class MatrixCheckTest {
         };
         int row = 1;
         boolean result = MatrixCheck.monoHorizontal(input, row);
-        Assert.assertFalse(result);
+        assertThat(result).isFalse();
     }
 
     @Test
@@ -37,7 +37,7 @@ public class MatrixCheckTest {
         };
         int column = 2;
         boolean result = MatrixCheck.monoVertical(input, column);
-        Assert.assertTrue(result);
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -49,7 +49,7 @@ public class MatrixCheckTest {
         };
         int column = 2;
         boolean result = MatrixCheck.monoVertical(input, column);
-        Assert.assertFalse(result);
+        assertThat(result).isFalse();
     }
 
     @Test
@@ -61,7 +61,7 @@ public class MatrixCheckTest {
         };
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'X', 'X', 'X'};
-        Assert.assertArrayEquals(expected, result);
+        assertThat(result).containsExactly(expected);
     }
 
     @Test
@@ -73,7 +73,7 @@ public class MatrixCheckTest {
         };
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'1', '1', '1'};
-        Assert.assertArrayEquals(expected, result);
+        assertThat(result).containsExactly(expected);
     }
 
     @Test
@@ -85,6 +85,6 @@ public class MatrixCheckTest {
         };
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'X', 'Y', 'Z'};
-        Assert.assertArrayEquals(expected, result);
+        assertThat(result).containsExactly(expected);
     }
 }

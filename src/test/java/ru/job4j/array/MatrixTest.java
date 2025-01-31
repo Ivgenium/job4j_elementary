@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixTest {
     @Test
@@ -12,7 +12,7 @@ public class MatrixTest {
                 {1, 2},
                 {2, 4}
         };
-        Assert.assertArrayEquals(expected, result);
+        assertThat(result).isDeepEqualTo(expected);
     }
 
     @Test
@@ -24,8 +24,8 @@ public class MatrixTest {
                 {2, 4, 6, 8, 10},
                 {3, 6, 9, 12, 15},
                 {4, 8, 12, 16, 20},
-                {5, 10, 15, 20, 25},
+                {5, 10, 15, 20, 25}
         };
-        Assert.assertArrayEquals(expected, result);
+        assertThat(result).isDeepEqualTo(expected);
     }
 }

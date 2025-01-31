@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class LogicNotTest {
 
@@ -10,7 +10,7 @@ public class LogicNotTest {
         int number = 20;
         boolean result = LogicNot.isEven(number);
         boolean expected = true;
-        Assert.assertEquals(result, expected);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class LogicNotTest {
         int number = 20;
         boolean result = LogicNot.isPositive(number);
         boolean expected = true;
-        Assert.assertEquals(result, expected);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class LogicNotTest {
         int number = 19;
         boolean result = LogicNot.notEven(number);
         boolean expected = true;
-        Assert.assertEquals(result, expected);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class LogicNotTest {
         int number = -19;
         boolean result = LogicNot.notPositive(number);
         boolean expected = true;
-        Assert.assertEquals(result, expected);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class LogicNotTest {
         int number = 19;
         boolean result = LogicNot.notEvenAndPositive(number);
         boolean expected = true;
-        Assert.assertEquals(result, expected);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class LogicNotTest {
         int number = -19;
         boolean result = LogicNot.evenOrNotPositive(number);
         boolean expected = true;
-        Assert.assertEquals(result, expected);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -58,6 +58,6 @@ public class LogicNotTest {
         int number = 20;
         boolean result = LogicNot.evenOrNotPositive(number);
         boolean expected = true;
-        Assert.assertEquals(result, expected);
+        assertThat(result).isEqualTo(expected);
     }
 }

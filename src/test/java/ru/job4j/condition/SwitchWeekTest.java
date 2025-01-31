@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SwitchWeekTest {
 
@@ -10,7 +10,7 @@ public class SwitchWeekTest {
         int day = 1;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Понедельник";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class SwitchWeekTest {
         int day = 2;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Вторник";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class SwitchWeekTest {
         int day = 3;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Среда";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class SwitchWeekTest {
         int day = 4;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Четверг";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class SwitchWeekTest {
         int day = 5;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Пятница";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class SwitchWeekTest {
         int day = 6;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Суббота";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class SwitchWeekTest {
         int day = 7;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Воскресенье";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class SwitchWeekTest {
         int day = 0;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Ошибка";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -74,7 +74,7 @@ public class SwitchWeekTest {
         int day = -50;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Ошибка";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -82,6 +82,6 @@ public class SwitchWeekTest {
         int day = 19;
         String result = SwitchWeek.nameOfDay(day);
         String expected = "Ошибка";
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 }

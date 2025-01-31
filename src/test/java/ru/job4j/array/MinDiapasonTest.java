@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MinDiapasonTest {
     @Test
@@ -11,7 +11,7 @@ public class MinDiapasonTest {
         int finish = 3;
         int result = MinDiapason.findMin(array, start, finish);
         int expected = 0;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class MinDiapasonTest {
         int finish = 3;
         int result = MinDiapason.findMin(array, start, finish);
         int expected = 1;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -31,6 +31,6 @@ public class MinDiapasonTest {
         int finish = 2;
         int result = MinDiapason.findMin(array, start, finish);
         int expected = 2;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 }

@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixSumTest {
     @Test
@@ -11,7 +11,7 @@ public class MatrixSumTest {
         };
         int result = MatrixSum.sum(array);
         int expected = 10;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class MatrixSumTest {
         };
         int result = MatrixSum.sum(array);
         int expected = 6;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -33,6 +33,6 @@ public class MatrixSumTest {
         };
         int result = MatrixSum.sum(array);
         int expected = 7;
-        Assert.assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 }

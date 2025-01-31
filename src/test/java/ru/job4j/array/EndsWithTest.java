@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class EndsWithTest {
     @Test
@@ -9,7 +9,7 @@ public class EndsWithTest {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] post = {'l', 'o'};
         boolean result = EndsWith.endsWith(word, post);
-        Assert.assertTrue(result);
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -17,6 +17,6 @@ public class EndsWithTest {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] post = {'l', 'a'};
         boolean result = EndsWith.endsWith(word, post);
-        Assert.assertFalse(result);
+        assertThat(result).isFalse();
     }
 }
