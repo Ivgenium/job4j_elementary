@@ -9,7 +9,7 @@ public class MathFunc {
 
     public static int func2(int x) {
         int y = x * 10;
-        return  y;
+        return y;
     }
 
     public static void main(String[] args) {
