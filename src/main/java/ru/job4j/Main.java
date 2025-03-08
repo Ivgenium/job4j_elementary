@@ -3,5 +3,7 @@ package ru.job4j;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world");
+        System.out.println("Воодушевленное настроение \uD83C\uDF1F");
+        System.out.println("Счастливейший на свете \uD83D\uDE0E");
     }
 }
